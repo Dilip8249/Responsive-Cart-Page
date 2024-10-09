@@ -1,0 +1,428 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* #body-div {
+  visibility: hidden;
+} */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #ffffff;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+.logo-img {
+  width: 50px;
+}
+
+.logo-div h2 {
+  font-family: Montserrat;
+}
+
+.logo-div {
+  display: flex;
+  align-items: center;
+}
+
+.nav-right {
+  display: flex;
+  gap: 40px;
+}
+
+.nav-right img {
+  width: 35px;
+  cursor: pointer;
+}
+
+.nav-middle {
+  display: flex;
+  gap: 50px;
+}
+
+.nav-middle a {
+  text-decoration: none;
+  font-family: Poppins;
+  font-weight: 500;
+  color: #000000;
+}
+
+/* Background section with blur effect */
+section {
+  background-image: url("assets/background.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 250px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  filter: blur(8px);
+  z-index: 1;
+}
+
+section * {
+  position: relative;
+  z-index: 2;
+}
+
+section div img {
+  width: 50px;
+}
+
+section > div:nth-child(3) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+section > div:nth-child(3) h4,
+span {
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+section > div:nth-child(3) h3 {
+  font-family: Poppins;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+section > div:nth-child(2) h1 {
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 48px;
+}
+
+/* Cart layout */
+.cart {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  column-gap: 25px;
+  width: fit-content;
+  margin: 50px auto;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background-color: #f9f1e7;
+  color: #000000;
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+td {
+  font-family: Poppins;
+}
+
+.right-side {
+  background-color: #f9f1e7;
+  padding: 20px;
+}
+
+.table-img {
+  width: 100px;
+  background-color: #e4d7c7;
+  border-radius: 10px;
+}
+
+.delete {
+  width: 30px;
+  cursor: pointer;
+}
+
+.right-side {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.sub-total-div,
+.total-div {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.qty-div {
+  display: flex;
+}
+.sub-total,
+.p-qty,
+.p-price,
+.p-name {
+  display: none;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  /* width: 100vw; */
+  height: 270px;
+
+  background-color: #faf3ea;
+}
+.high-quality img {
+  width: 50px;
+}
+.high-quality {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.high-quality div h3 {
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 25px;
+}
+.high-quality div p {
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 20px;
+  color: #898989;
+}
+.product,
+.pr-price {
+  color: #9f9f9f;
+}
+
+.right-side h1,
+.sub-total-div p,
+.total-div p,
+h3 {
+  font-family: Poppins;
+}
+.total-div h3 {
+  color: #b88e2f;
+}
+.checkOut-btn {
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 20px;
+  padding: 10px 50px;
+  border-radius: 15px;
+  background-color: #f9f1e7;
+  cursor: pointer;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .logo-img {
+    width: 30px;
+  }
+  .logo-div h2 {
+    font-size: 17px;
+  }
+  .nav-middle {
+    gap: 25px;
+  }
+  .nav-middle a {
+    font-size: 13px;
+  }
+  .nav-right {
+    gap: 20px;
+  }
+  .nav-right img {
+    width: 30px;
+  }
+
+  .cart {
+    width: 90%;
+    margin: 50px auto;
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  .table-img {
+    width: 80px;
+  }
+
+  .delete {
+    width: 20px;
+  }
+
+  .right-side {
+    padding: 10px;
+  }
+
+  .sub-total-div p,
+  .total-div p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-middle {
+    display: none;
+  }
+
+  .nav-right {
+    gap: 10px;
+  }
+
+  .nav-right img {
+    width: 25px;
+  }
+
+  nav {
+    padding: 10px;
+  }
+
+  .cart {
+    width: 100%;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  table {
+    width: 100%;
+    font-size: 12px;
+  }
+
+  th,
+  td {
+    padding: 5px;
+  }
+
+  .table-img {
+    width: 50px;
+  }
+
+  .delete {
+    width: 20px;
+  }
+
+  .right-side {
+    width: 100%;
+    padding: 10px;
+  }
+
+  button {
+    width: 100%;
+    padding: 10px;
+  }
+  thead {
+    display: none;
+  }
+  .table-img {
+    width: 150px;
+  }
+  tr {
+    display: flex;
+    flex-direction: column;
+  }
+  .qty-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  .sub-total,
+  .p-qty,
+  .p-price,
+  .p-name {
+    display: contents;
+  }
+}
+.quantity-input {
+  height: 30px;
+  width: 40px;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    gap: 20px;
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .high-quality {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .high-quality img {
+    margin-bottom: 10px;
+  }
+
+  .high-quality div h3 {
+    font-size: 22px;
+  }
+
+  .high-quality div p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  footer {
+    flex-direction: column;
+    gap: 10px;
+    height: auto;
+    padding: 10px 0;
+  }
+
+  .high-quality {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .high-quality img {
+    margin-bottom: 8px;
+    width: 40px; /* Adjust for smaller screen */
+  }
+
+  .high-quality div h3 {
+    font-size: 20px;
+  }
+
+  .high-quality div p {
+    font-size: 16px;
+  }
+}
